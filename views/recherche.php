@@ -1,16 +1,21 @@
 <?php include '../controllers/recherche.php' ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" >
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Réchercher Candidat</title>
-</head>
-<body>
-    <div class="container mt-3 card">
+<!-- header start -->
+<?php include './header.php' ?>
+<!-- header end -->
+
+  <div class="containe">
+    <!-- menu start -->
+    <?php include './menu.php' ?>
+    <!-- menu end -->
+
+    <div class="content">
+      <!-- info start -->
+      <?php include './info.php' ?>
+      <!-- info end -->
+
+      <div class="container-fluide m-3 mt-2">
+     
         <h2>Réchercher les candidats dans une filière</h2>
         <div class="form-group row my-2 mt-3">
             <div class="col-sm-10">
@@ -69,13 +74,10 @@
                 </table>
             </div>
         </div>
-    </div>
 
-    <script src="../../assets/js/jquery.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/scripts.js"></script>
-</body>
-</html>
-      
-</body>
-</html>
+    </div>
+  </div>
+
+<!-- footer start -->
+<?php include './views/footer.php' ?>
+<!-- footer end -->

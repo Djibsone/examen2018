@@ -1,6 +1,7 @@
 
     /* Styles CSS pour la structure de la page */
     body {
+      font-family:Georgia, 'Times New Roman', Times, serif;
       margin: 0;
       padding: 0;
       display: flex;

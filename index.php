@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Bienvenu à l'accueil</title>
-  
-</head>
-<body>
+<!-- header start -->
+<?php include './views/header.php' ?>
+<!-- header end -->
+
   <div class="containe">
-    <div class="sidebar">
-      <?php include './views/menu.php' ?>
-    </div>
+
+    <!-- menu start -->
+    <?php include './views/menu.php' ?>
+    <!-- menu end -->
+    
     <div class="content">
-      <header>
-        <?php include './views/info.php' ?>
-      </header>
-      <?php include './views/saisie.php' ?>
+      <!-- info start -->
+      <?php include './views/info.php' ?>
+      <!-- info end -->
+
+      <div class="container-fluide m-3 mt-2">
+        <!-- saisie start -->
+        <?php include './views/saisie.php' ?>
+        <!-- saisie end -->
+      </div>
     </div>
+
   </div>
 
-  <script src="../../assets/js/jquery.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/scripts.js"></script>
-</body>
-</html>
+<!-- footer start -->
+<?php include './views/footer.php' ?>
+<!-- footer end -->
