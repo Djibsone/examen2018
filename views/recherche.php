@@ -57,7 +57,7 @@
         
         <div class="form-group row my-4">
             <div class="panel-body">
-                <h2>LISTE DES CANDIDATS</h2>
+                <h2>LISTE DES CANDIDATS (<span class="text-danger"><?= ($total_cadits) ? $total_cadits : 0 ?></span>)</h2>
                 <table class="table table-bordered">
                     <thead class="thead-light text-center">
                         <tr>

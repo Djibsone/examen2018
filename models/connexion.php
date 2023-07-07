@@ -76,6 +76,15 @@ function rechercheCandidats($filiere) {
 //     return $req;
 // }
 
+//Compter le nombre de candidat
+function countCandidats($filiere) {
+    $db = dbConnect();
+    $stmt = $db->prepare('SELECT COUNT(*) AS total_cadits FROM candidat WHERE codefil = ?');
+    $stmt->execute(array($filiere));
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $result['total_cadits'];
+}
+
 //Supprimer l'nfos user dans la table password_reset
 function delUser($token){
     $db = dbConnect();

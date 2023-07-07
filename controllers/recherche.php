@@ -11,6 +11,8 @@ if (isset($_POST['ok'])) {
         $candidats = $stmt->fetch();
         var_dump($candidats);*/
         //($stmt) ? $_SESSION['success'] = 'Enregistrment effectué avec succès' : $_SESSION['error'] = 'Erreur d\'enregistrement';
+        //compter le numbre candidats par filere
+        $total_cadits = countCandidats($filiere);
        
     } else {
         $_SESSION['error'] = 'Indiquez la filière svp';
