@@ -17,6 +17,7 @@
 
     <div class="content">
       <!-- info start -->
+      <!-- <object data="./info.html" width="100%"></object> -->
       <?php include './info.php' ?>
       <!-- info end -->
 
