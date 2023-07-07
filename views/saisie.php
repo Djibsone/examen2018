@@ -43,7 +43,7 @@
           <?php
             require_once('./models/connexion.php'); 
             $db = dbConnect();
-            $req = $db->query('SELECT * FROM filiere ');
+            $req = $db->query('SELECT * FROM filiere ORDER BY codefl DESC ');
             $filires = $req;
             foreach($filires as $filire): 
           ?>

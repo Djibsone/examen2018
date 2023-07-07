@@ -14,7 +14,7 @@ function dbConnect(){
 function getAllCandidats(){
     $db = dbConnect();
 
-    $req = $db->query('SELECT * FROM cadidat ');
+    $req = $db->query('SELECT * FROM candidat ORDER BY id DESC');
     $req->execute();
     return $req;
 }
@@ -26,24 +26,6 @@ function getCandidat($nom){
 
     $req = $db->prepare('SELECT * FROM candidat WHERE nom = ?');
     $req->execute(array($nom));
-    return $req;
-}
-
-//Récupérer le pseudo user
-function getUserPseudo($pseudo){
-    $db = dbConnect();
-
-    $req = $db->prepare('SELECT * FROM users WHERE pseudo = ?');
-    $req->execute(array($pseudo));
-    return $req;
-}
-
-//Récupérer le token d'un user
-function getUserToken($u){
-    $db = dbConnect();
-
-    $req = $db->prepare('SELECT token FROM users WHERE token = ?');
-    $req->execute(array($u));
     return $req;
 }
 
