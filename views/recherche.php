@@ -47,7 +47,7 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group row my-2">
+            <div class="form-group row my-3">
                 <label class="col-sm-2 col-form-label col-form-label-lg">Envoyer</label>
                 <div class="col-sm-2">
                     <input type="submit" name="ok" class="form-control form-control-lg btn btn-outline-primary fw-bold" value="OK">
