@@ -5,12 +5,8 @@ if (isset($_POST['ok'])) {
     if (!empty($_POST['filiere'])) {
         $filiere = htmlspecialchars($_POST['filiere']);
 
-        $candidats = rechercheCandidats($filiere);
-        /*$stmt = rechercheCandidats($filiere);
+        $candidats = rechercheCandidats($filiere);        
         
-        $candidats = $stmt->fetch();
-        var_dump($candidats);*/
-        //($stmt) ? $_SESSION['success'] = 'Enregistrment effectué avec succès' : $_SESSION['error'] = 'Erreur d\'enregistrement';
         //compter le numbre candidats par filere
         $total_cadits = countCandidats($filiere);
        
@@ -18,3 +14,6 @@ if (isset($_POST['ok'])) {
         $_SESSION['error'] = 'Indiquez la filière svp';
     } 
 }
+
+//recuperer les filieres
+$filieres = getFilieres();

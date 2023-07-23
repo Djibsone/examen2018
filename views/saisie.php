@@ -1,3 +1,4 @@
+<?php include './controllers/getFiliere.php' ?>
 <h2>Vos coordonnées</h2>
 <div class="form-group row my-2 mt-4">
   <div class="col-sm-10">
@@ -39,15 +40,9 @@
     <label class="col-sm-2 col-form-label col-form-label-lg">Filière</label>
     <div class="col-sm-2">
         <select class="form-control form-control-lg" name="filiere">
-            <option value="">Select filière</option>
-          <?php
-            require_once('./models/connexion.php'); 
-            $db = dbConnect();
-            $req = $db->query('SELECT * FROM filiere ORDER BY codefil DESC');
-            $filires = $req;
-            foreach($filires as $filire): 
-          ?>
-            <option value="<?= $filire['codefil'] ?>"><?= $filire['nomfil'] ?></option>
+          <option value="">Select filière</option>
+          <?php foreach($filieres as $filiere): ?>
+            <option value="<?= $filiere['codefil'] ?>"><?= $filiere['nomfil'] ?></option>
           <?php endforeach; ?> 
         </select>
     </div>

@@ -35,14 +35,8 @@
                 <div class="col-sm-4">
                     <select class="form-control form-control-lg" name="filiere">
                         <option value="">Select filière</option>
-                        <?php
-                            require_once('../models/connexion.php'); 
-                            $db = dbConnect();
-                            $req = $db->query('SELECT * FROM filiere ORDER BY codefil DESC');
-                            $filires = $req;
-                            foreach($filires as $filire): 
-                        ?>
-                        <option value="<?= $filire['codefil'] ?>"><?= $filire['nomfil'] ?></option>
+                        <?php foreach($filieres as $filiere): ?>
+                            <option value="<?= $filiere['codefil'] ?>"><?= $filiere['nomfil'] ?></option>
                         <?php endforeach; ?> 
                     </select>
                 </div>
